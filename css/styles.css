@@ -37,3 +37,7 @@ footer{
 h2{
     color: white;
 }
+
+.card-body{
+    background-color: rgb(235, 235, 235);
+}
