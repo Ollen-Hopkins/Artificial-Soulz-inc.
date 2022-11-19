@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Matching Game</title>
-    <style>
-        img {
-            position: absolute;
-        }
-        div {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-        }
-        #rightSide {
-            left: 500px;
-            border-left: 1px solid;
-        }
-    </style>
-</head>
-<body>
-    <h1>Matching Game</h1>
-    <p>Click on the extra smiling face on the left.</p>
-    <div id="leftSide"></div>
-    <div id="rightSide"></div>
-    
-    <script>
-        window.addEventListener('load', generateFaces);
+window.addEventListener('load', generateFaces);
         let numberOfFaces = 5;
         const theLeftSide = document.getElementById("leftSide");
         const theRightSide = document.getElementById("rightSide");
@@ -33,7 +6,7 @@
         function generateFaces() {
             for (let i = 0; i < numberOfFaces; i++) {
                 const face = document.createElement('img');
-                face.src = 'img/smile.png';
+                face.src = '../img/smile.png';
                 const randomTop = Math.floor(Math.random() * 400) + 1;
                 const randomLeft = Math.floor(Math.random() * 400) + 1;
                 face.style.top = randomTop + 'px';
@@ -66,7 +39,3 @@
             document.body.removeEventListener('click', gameOver);
             theLeftSide.lastChild.removeEventListener('click', nextLevel);
         }
-
-    </script>
-</body>
-</html>
